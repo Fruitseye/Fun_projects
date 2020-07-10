@@ -1,10 +1,9 @@
 from moviepy.editor import VideoFileClip,AudioFileClip,vfx,clips_array
 #import moviepy.video.fx.all as vfx
-import os
-
-FileLoc="/home/kanishkan/Documents/"
+#import os
 #direct=os.path.dirname(os.path.abspath(__file__))
-clip=VideoFileClip("test.mp4")
+
+
 
 def Dark_MODE(clip):
     audio=AudioFileClip("soundtrack.mp3")
@@ -27,6 +26,9 @@ def Dark_MODE(clip):
     #audio=audio.fadeout(2)
     final_clip=final_clip.set_audio(audio)
     final_clip.resize(width=480).write_videofile("Dark.mp4")
+
+ 
+clip=VideoFileClip("test.mp4")
 
 if __name__=="__main__":
     Dark_MODE(clip)
